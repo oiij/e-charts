@@ -1,18 +1,18 @@
 {
-  "name": "ts-starter",
+  "name": "e-charts",
   "type": "module",
   "version": "0.0.1",
-  "description": "A starter template for TypeScript projects",
+  "description": "A Vue Composable for ECharts",
   "author": "oiij",
   "license": "MIT",
-  "homepage": "https://github.com/oiij/ts-starter",
+  "homepage": "https://github.com/oiij/e-charts",
   "repository": {
     "type": "git",
-    "url": "git@github.com:oiij/ts-starter.git"
+    "url": "git@github.com:oiij/e-charts.git"
   },
-  "bugs": "https://github.com/oiij/ts-starter/issues",
+  "bugs": "https://github.com/oiij/e-charts/issues",
   "keywords": [
-    "ts-starter"
+    "e-charts"
   ],
   "sideEffects": false,
   "exports": {
@@ -47,18 +47,24 @@
     "cz": "czg",
     "commit": "git pull && git add -A && pnpm cz && git push",
     "link": "pnpm link --global",
-    "preinstall": "npx only-allow pnpm",
-    "postinstall": "npx simple-git-hooks"
+    "preinstall": "npx only-allow pnpm"
+  },
+  "peerDependencies": {
+    "@vueuse/core": "^13.1.0",
+    "echarts": "^5.6.0",
+    "vue": "^3.5.13"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.12.0",
     "@oiij/tsconfig": "^0.0.1",
     "@types/node": "^22.14.1",
     "@vitest/ui": "^3.1.2",
+    "@vueuse/core": "^13.1.0",
     "bumpp": "^10.1.0",
     "commitlint": "^19.8.0",
     "cz-git": "^1.11.1",
     "czg": "^1.11.1",
+    "echarts": "^5.6.0",
     "eslint": "^9.25.1",
     "eslint-plugin-format": "^1.0.1",
     "esno": "^4.8.0",
@@ -67,7 +73,8 @@
     "taze": "^19.0.4",
     "tsup": "^8.4.0",
     "typescript": "^5.8.3",
-    "vitest": "^3.1.2"
+    "vitest": "^3.1.2",
+    "vue": "^3.5.13"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged && pnpm type:check"

@@ -7,18 +7,30 @@ Features:
 
 # Usage
 
-### 本地包测试
-
-当前目录下执行：
+### 安装
 
 ```bash
-pnpm link --global --dir=./
+pnpm add @oiij/e-charts
 ```
 
-目标目录：
+### 使用
 
-```bash
-pnpm link --global <package name>
+```vue
+<script setup lang="ts">
+import type { EChartsOption } from '@oiij/e-charts'
+import { useECharts } from '@oiij/e-charts'
+import { ref } from 'vue'
+const option: EChartsOption = ref({
+  xAxis: {
+    type: 'category',
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  },
+})
+const { domRef } = useECharts(option)
+</script>
+<template>
+  <div ref="domRef" style="width: 100%; height: 100%;"></div>
+</template>
 ```
 
 ## License
